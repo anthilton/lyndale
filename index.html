@@ -7,6 +7,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/growl.js"></script>
 		<script src="js/main.js"></script>
+        <script src="js/parsley.min.js"></script>
         <script src="clearbox.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
@@ -20,7 +21,23 @@
 			<header class="row">
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 					<div class="header-logo">
-						<img src="images/logo.png" style="max-height:175px; max-width:295px; width:100%;"/>
+						<a href="index.html">
+                            <img src="images/logo.png" style="max-height:175px; max-width:295px; width:100%;"/>
+						</a>
+                        <div class="row visible-xs">
+                            <div class="col-xs-6">
+                                <h4><a href="tel:01822 615681" style="text-decoration:none;">
+                                    <i class="glyphicon glyphicon-earphone"></i> 01822 615681</a>
+                                </h4>
+                            </div>
+                            <div class="col-xs-6">
+                                <h4>
+                                    <a href="" data-toggle="modal" data-target="#email-modal" style="text-decoration:none;">
+                                        <i class="glyphicon glyphicon-envelope"></i> Email us
+                                    </a>
+                                </h4>	
+                            </div>
+                        </div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs header-contact-section">
