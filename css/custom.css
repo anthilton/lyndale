@@ -1,0 +1,183 @@
+body{
+	background: url('../images/bgdiaglines.png');
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.header-contact-section{
+    margin-top:20px;
+}
+.header-logo{
+    padding:10px;
+}
+.cqc{
+    text-align:left;
+}
+@media(max-width:767px){
+    .header-logo{
+        text-align:center;
+    }
+    
+    .cqc{
+        text-align:center;
+    }
+}
+@media(max-width:991px){
+    .cqc{
+        text-align:center;
+    }
+}
+@media(min-width:992px){
+    
+    
+}
+.margin-top-10{
+	margin-top:10px;
+}
+.margin-top-20{
+	margin-top:20px;
+}
+.margin-top-30{
+	margin-top:30px;
+}
+.margin-top-40{
+	margin-top:40px;
+}
+.margin-top-50{
+	margin-top:50px;
+}
+.margin-top-60{
+	margin-top:60px;
+}
+.margin-top-70{
+	margin-top:70px;
+}
+.margin-bottom-10{
+	margin-bottom:10px;
+}
+.margin-bottom-20{
+	margin-bottom:20px;
+}
+
+.content-fixed{
+	padding-top:40px;
+}
+.request-brochure-mobile{
+	margin-top:3px;
+}
+.mobile-page-nav{
+	color:#FFF;
+	padding:9px 13px;
+	display:inline-block;
+	cursor: pointer;
+	background:#4a1a44;
+}
+.mobile-page-nav .text{
+	padding-left:5px;
+}
+.mobile-page-nav:hover{
+	color:#FFF;
+	text-decoration:none;
+}
+.mobile-page-actions
+{
+	color:#fff;
+	padding:9px 13px;
+	display:inline-block;
+	cursor: pointer;
+}
+.mobile-page-actions .text{
+	padding-left:5px;
+}
+.mobile-page-actions:hover{
+	color:#FFF;
+	text-decoration:none;
+}
+.panel .panel-body h1{
+	display:inline-block;
+	margin-top:0px;
+}
+@media (max-width: 767px) {
+  .header-detail {
+    text-align:center;
+  }
+}
+.banner{
+max-height:132px;
+}
+.caret.caret-reversed {
+    border-top-width: 0;
+    border-bottom: 4px solid #FFF;
+}
+
+.sticky-contact{
+	position:absolute; 
+	right:0px; 
+	background:#16DD00; 
+	border-radius: 0px 0px 0px 30px;
+	-moz-border-radius: 0px 0px 0px 30px;
+	-webkit-border-radius: 0px 0px 0px 30px; 
+	z-index:1;
+}
+.sticky-contact .contact{
+	color:#FFF;display:block; padding:15px 20px;
+}
+
+.sticky-contact .contact.number{
+	background:#4a1a44;
+}
+
+.sticky-contact .contact.email{
+	background:#4a1a44;
+}
+
+.scroll-top{
+	position:fixed; 
+	display:none; 
+	bottom:40px; 
+	right:10px; 
+	padding:15px 20px; 
+	border:1px solid black; 
+	background:#421c52; 
+	color:#FFF;
+}
+
+.banner-logo{
+	width:100%; 
+	max-width:250px;
+}
+.banner-slogan{
+	font-family: 'Dancing Script', cursive;
+}
+header{
+	background: url('../images/topBarBg.png');
+}
+footer{
+	background-color:#6E06C5;
+	color:#FFF;	
+	padding-top:20px;
+	border-top: 2px solid #B379C6;
+}
+
+
+.text-increase{
+    font-size:20px;
+}
+.navbar-header .text-increase{
+    margin-left:5px;
+}
+
+.text-increase a{
+    cursor: pointer;
+}
+
+.nav .text-increase a, .navbar-header .text-increase a{
+    color: #FFF;
+}
+.email-form{
+    -webkit-box-shadow: 5px 11px 9px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 11px 9px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 11px 9px -5px rgba(0,0,0,0.75);
+    background: #F4F4F4; 
+    padding: 10px;
+}
