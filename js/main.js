@@ -3,10 +3,10 @@ var offsetFromTop = 0;
 $(document).ready(function(e){
     
     var modalValidator = $('#emailModalForm').parsley();
-    var modalValidator = $('#send-email-form').parsley();
+    var normalValidator = $('#send-email-form').parsley();
 	var request;
     $('#send-email-form').on("submit",function(event){
-		if(!modalValidator.isValid()){
+		if(!normalValidator.isValid()){
 			return false;
 		}
 		
@@ -35,8 +35,8 @@ $(document).ready(function(e){
 					'from_email': $('#email-address').val(),
 					'to': [
 						{
-							'email': 'anthilton@gmail.com',
-							'name': 'Anthony',
+							'email': 'lyndalecare@gmail.com',
+							'name': $("#email-name").val(),
 							'type': 'to'
 						}
 					],
@@ -106,8 +106,8 @@ $(document).ready(function(e){
 					'from_email': $('#modal-email-address').val(),
 					'to': [
 						{
-							'email': 'anthilton@gmail.com',
-							'name': 'Anthony',
+							'email': 'lyndalecare@gmail.com',
+							'name': $("#modal-email-name").val(),
 							'type': 'to'
 						}
 					],
