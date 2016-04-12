@@ -42,7 +42,7 @@ $(document).ready(function(e){
 					],
 				'autotext': 'true',
 				'subject': 'Lyndale Website Email',
-				'html': $('#modal-email-message').val()
+				'html': $('#email-message').val()
 			}
 			}
 			});
