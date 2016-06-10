@@ -187,3 +187,24 @@ footer{
     background: #F4F4F4; 
     padding: 10px;
 }
+
+.navbar-default .navbar-toggle{
+	border-color: #d5d5d5;
+    background: #ccc;
+}
+@media (max-width: 768px) {
+	.nav.navbar-nav{
+		background: #4c0389;
+	}
+}
+
+.quick-link{
+	padding:5px;
+	display: inline-block;
+    border-radius: 5px;
+	width:100%;
+}
+.quick-link:hover{
+	text-decoration:none;
+    background: #CCC;
+}
