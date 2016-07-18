@@ -3,79 +3,9 @@ var offsetFromTop = 0;
 $(document).ready(function(e){
     
     var modalValidator = $('#emailModalForm').parsley();
-    var normalValidator = $('#send-email-form').parsley();
+    
 	var request;
-    $('#send-email-form').on("submit",function(event){
-		if(!normalValidator.isValid()){
-			return false;
-		}
-		
-		if (request) {
-			request.abort();
-		}
-		
-		var $form = $(this);
-	
-		// Let's select and cache all the fields
-		var $inputs = $form.find("input, select, button, textarea");
-	
-		// Serialize the data in the form
-		var serializedData = $form.serialize();
-		
-		$inputs.prop("disabled", true);
-		
-		$('#email-sending').removeClass("hide");
-					
-		var request = $.ajax({
-			type: 'POST',
-			url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-			data: {
-				'key': 'ovVqO3_aJHVaIpGZPHPn7A',
-				'message': {
-					'from_email': $('#email-address').val(),
-					'to': [
-						{
-							'email': 'lyndalecare@gmail.com',
-							'name': $("#email-name").val(),
-							'type': 'to'
-						}
-					],
-				'autotext': 'true',
-				'subject': 'Lyndale Website Email',
-				'html': $('#email-message').val()
-			}
-			}
-			});
-	
-	
-		// Callback handler that will be called on success
-		request.done(function (response, textStatus, jqXHR){
-			clearEmailFields();
-			$form.parsley().reset();
-			$('#email-sending').addClass("hide");
-			$('#email-sent').removeClass("hide");
-			setTimeout(function(){
-				$('#email-sent').addClass("hide");
-			}, 3000); 
-		});
-
-		// Callback handler that will be called on failure
-		request.fail(function (jqXHR, textStatus, errorThrown){
-			$('#email-sending').addClass("hide");
-			$('#email-sent').addClass("hide");
-		});
-		
-		// Callback handler that will be called regardless
-		// if the request failed or succeeded
-		request.always(function () {
-			// Reenable the inputs
-			$inputs.prop("disabled", false);
-		});
-		
-		event.preventDefault();
-		
-        
-    });
+    
 	$('#emailModalForm').on("submit",function(event){
 		if(!modalValidator.isValid()){
 			return false;
@@ -96,28 +26,14 @@ $(document).ready(function(e){
 		$inputs.prop("disabled", true);
 		
 		$('#modal-email-sending').removeClass("hide");
-					
+		
+		var data = "msgName=" + $("#modal-email-name").val() + "&msgTextArea=" + $('#modal-email-message').val() + "&msgEmailAddress=" + $('#modal-email-address').val() + "&msgContactNumber=" + $('#modal-email-telephone').val();
+    
 		var request = $.ajax({
-			type: 'POST',
-			url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-			data: {
-				'key': 'ovVqO3_aJHVaIpGZPHPn7A',
-				'message': {
-					'from_email': $('#modal-email-address').val(),
-					'to': [
-						{
-							'email': 'lyndalecare@gmail.com',
-							'name': $("#modal-email-name").val(),
-							'type': 'to'
-						}
-					],
-				'autotext': 'true',
-				'subject': 'Lyndale Website Email',
-				'html': $('#modal-email-message').val()
-			}
-			}
-			});
-	
+            type: "POST",
+            url: "send_email.php",
+            data: data
+        });	
 	
 		// Callback handler that will be called on success
 		request.done(function (response, textStatus, jqXHR){
@@ -206,18 +122,9 @@ $(document).ready(function(e){
     });
 });
 
-
 function clearModalEmailFields(){
 	$("#modal-email-name").val("");
 	$("#modal-email-address").val("");
 	$("#modal-email-telephone").val("");
 	$("#modal-email-message").val("");
-};
-
-
-function clearEmailFields(){
-	$("#email-name").val("");
-	$("#email-address").val("");
-	$("#email-telephone").val("");
-	$("#email-message").val("");
 };
